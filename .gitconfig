@@ -1,0 +1,41 @@
+[user]
+	name = Kevin Peters
+	email = kwpeters@ra.rockwell.com
+[core]
+	editor = emacs
+	autocrlf = input
+	excludesfile = /Users/kwpeters/.gitignore_global
+	longpaths = true
+[github]
+	user = kwpeters
+[color]
+	ui = auto
+[difftool "kdiff3"]
+    path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
+    trustExitCode = false
+[difftool]
+    prompt = false
+[diff]
+    tool = kdiff3
+[mergetool "kdiff3"]
+    path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
+    trustExitCode = false
+[mergetool]
+    keepBackup = false
+[merge]
+    tool = kdiff3
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/kdiff3.app/Contents/MacOS/kdiff3 \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
+	trustExitCode = true
+[push]
+	default = simple
+
+[alias]
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	st = status
+	co = checkout
+[http]
+	sslCAInfo = /Users/kwpeters/dev/mft.ra-int.cer
