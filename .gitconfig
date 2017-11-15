@@ -1,6 +1,6 @@
 [user]
 	name = Kevin Peters
-	email = kwpeters@ra.rockwell.com
+	email = kwpeters@gmail.com
 [core]
 	editor = emacs
 	autocrlf = input
@@ -8,6 +8,7 @@
 	longpaths = true
 [github]
 	user = kwpeters
+	oauth-token = ee7ebe0d8f6d88664ab90e68eb7262c5ec0c2a9d
 [color]
 	ui = auto
 [difftool "kdiff3"]
@@ -37,5 +38,5 @@
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	st = status
 	co = checkout
-[http]
-	sslCAInfo = /Users/kwpeters/dev/mft.ra-int.cer
+[commit]
+	template = /Users/kwpeters/.stCommitMsg
