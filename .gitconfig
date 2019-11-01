@@ -17,7 +17,7 @@
 [difftool]
     prompt = false
 [diff]
-    tool = kdiff3
+	tool = opendiff
 [mergetool "kdiff3"]
     path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
     trustExitCode = false
@@ -38,5 +38,6 @@
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	st = status
 	co = checkout
+    br = branch --sort=committerdate
 [commit]
 	template = /Users/kwpeters/.stCommitMsg
