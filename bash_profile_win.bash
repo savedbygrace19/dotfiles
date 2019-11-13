@@ -1,0 +1,1 @@
+echo 'Performing Windows initialization (bash_profile_win.bash)...'

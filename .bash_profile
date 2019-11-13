@@ -17,6 +17,8 @@ echo 'Executing .bash_profile'
     if [[ $unamestr == MINGW32* ]]; then
 	echo 'Detected Windows'
         platform='Windows'
+    elif [[ $unamestr == MINGW64* ]]; then
+        platform='Windows'
     elif [[ $unamestr == Darwin* ]]; then
 	echo 'Detected OSX'
         platform='Mac'
@@ -37,14 +39,9 @@ echo 'Executing .bash_profile'
         source "$HOME/bash_profile_common.bash"
 
     elif [[ $platform == 'Windows' ]]; then
-        export DROPBOXHOME=~
-        export CLOUDHOME=$DROPBOXHOME
-        source "$CLOUDHOME/bash_profile_windows.bash"
-        source "$CLOUDHOME/bash_profile_common.bash"
+        source ~/bash_profile_win.bash
+        source ~/bash_profile_common.bash
     fi
 
     export BASHPROFILE="done"
 # fi
-
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
-
