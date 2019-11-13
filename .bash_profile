@@ -39,8 +39,8 @@ echo 'Executing .bash_profile'
         source "$HOME/bash_profile_common.bash"
 
     elif [[ $platform == 'Windows' ]]; then
-        source ~/bash_profile_win.bash
-        source ~/bash_profile_common.bash
+        source ~/dev/dotfiles/bash_profile_win.bash
+        source ~/dev/dotfiles/bash_profile_common.bash
     fi
 
     export BASHPROFILE="done"
