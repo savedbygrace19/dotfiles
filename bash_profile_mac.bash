@@ -68,7 +68,7 @@ export PATH=~/bin:${PATH}
 # Juggernaut
 #
 #-------------------------------------------------------------------------------
-export PATH=${PATH}:~/dev/juggernaut
+export PATH=${PATH}:~/dev/kwp/juggernaut
 
 
 #-------------------------------------------------------------------------------
@@ -76,7 +76,7 @@ export PATH=${PATH}:~/dev/juggernaut
 # JuggernautJS
 #
 #-------------------------------------------------------------------------------
-export PATH=${PATH}:~/dev/juggernautJS/src
+export PATH=${PATH}:~/dev/kwp/juggernautJS/src
 
 
 #-------------------------------------------------------------------------------
@@ -84,7 +84,7 @@ export PATH=${PATH}:~/dev/juggernautJS/src
 # JuggernautBash
 #
 #-------------------------------------------------------------------------------
-export PATH=${PATH}:~/dev/juggernautBash
+export PATH=${PATH}:~/dev/kwp/juggernautBash
 alias findgrep="findgrep.sh"
 
 
@@ -93,7 +93,7 @@ alias findgrep="findgrep.sh"
 # stella
 #
 #-------------------------------------------------------------------------------
-export PATH=${PATH}:~/dev/stella/dist/app
+export PATH=${PATH}:~/dev/kwp/stella/dist/app
 
 
 #-------------------------------------------------------------------------------
@@ -101,7 +101,7 @@ export PATH=${PATH}:~/dev/stella/dist/app
 # rokMac
 #
 #-------------------------------------------------------------------------------
-export PATH=${PATH}:~/dev/rokMac
+export PATH=${PATH}:~/dev/rok/rokMac
 
 
 #-------------------------------------------------------------------------------
@@ -243,7 +243,7 @@ ulimit -S -n 2048
 # rsync backup
 #
 ################################################################################
-# alias backup="~/dev/rsync/rsync.sh"
+# alias backup="~/dev/kwp/rsync/rsync.sh"
 
 
 ################################################################################
