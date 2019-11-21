@@ -80,8 +80,21 @@ alias serve="python -m SimpleHTTPServer 3001"
 
 
 alias sp="echo; echo; echo; echo; echo; clear; hr"
+
+################################################################################
+# Emacs
+################################################################################
+
 alias e="emacs"
 alias enw="emacs -nw"
+
+################################################################################
+# WebStorm
+#
+# In WebStorm, run "Tools -> Create command line launcher".  Once that is done,
+# this alias should work.
+################################################################################
+alias wstorm=webstorm
 
 # An alias that allows you to easily run a locally installed node
 # executable (from node_modules/.bin).

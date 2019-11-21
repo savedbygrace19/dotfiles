@@ -201,8 +201,6 @@ function man-preview() {
     man -t "$@" | open -f -a Preview
 }
 
-alias wstorm=webstorm
-
 ################################################################################
 #
 # A command to clear out Finder's "open with" menu
