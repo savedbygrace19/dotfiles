@@ -15,10 +15,13 @@ echo 'Executing .bash_profile'
     platform='UNKNOWN'   # Possible values: Windows, Mac, UNKNOWN
     unamestr=`uname`
     if [[ $unamestr == MINGW32* ]]; then
-	echo 'Detected Windows'
+	    echo 'Detected Windows'
+        platform='Windows'
+    elif [[ $unamestr == MINGW64* ]]; then
+        echo 'Detected Windows'
         platform='Windows'
     elif [[ $unamestr == Darwin* ]]; then
-	echo 'Detected OSX'
+	    echo 'Detected OSX'
         platform='Mac'
     else
         echo '========================================'

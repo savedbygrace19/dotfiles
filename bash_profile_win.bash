@@ -1,6 +1,6 @@
 echo 'Performing Windows initialization (bash_profile_win.bash)...'
 
-source ~/dev/dotfiles/run-ssh-agent.bash
+source ~/dev/kwp/dotfiles/run-ssh-agent.bash
 
 #-------------------------------------------------------------------------------
 # Setup the prompt
@@ -23,9 +23,9 @@ alias e="$EDITOR"
 # PATH
 #
 #-------------------------------------------------------------------------------
-export PATH=${PATH}:~/dev/juggernaut
-export PATH=${PATH}:~/dev/juggernautJS/src
-export PATH=${PATH}:~/dev/juggernautBash
+export PATH=${PATH}:~/dev/kwp/juggernaut
+export PATH=${PATH}:~/dev/kwp/juggernautJS/src
+export PATH=${PATH}:~/dev/kwp/juggernautBash
 alias findgrep="findgrep.sh"
 
-export PATH=${PATH}:~/dev/stella/dist/app
+export PATH=${PATH}:~/dev/kwp/stella/dist/app
