@@ -17,8 +17,6 @@ echo 'Executing .bash_profile'
     if [[ $unamestr == MINGW32* ]]; then
 	echo 'Detected Windows'
         platform='Windows'
-    elif [[ $unamestr == MINGW64* ]]; then
-        platform='Windows'
     elif [[ $unamestr == Darwin* ]]; then
 	echo 'Detected OSX'
         platform='Mac'
@@ -35,12 +33,12 @@ echo 'Executing .bash_profile'
     if [[ $platform == 'Mac' ]]; then
         export DROPBOXHOME=~/CloudStation/home
         export CLOUDHOME=$DROPBOXHOME
-        source "$HOME/bash_profile_mac.bash"
-        source "$HOME/bash_profile_common.bash"
+        source "$HOME/dev/kwp/dotfiles/bash_profile_mac.bash"
+        source "$HOME/dev/kwp/dotfiles/bash_profile_common.bash"
 
     elif [[ $platform == 'Windows' ]]; then
-        source ~/dev/dotfiles/bash_profile_win.bash
-        source ~/dev/dotfiles/bash_profile_common.bash
+        source ~/dev/kwp/dotfiles/bash_profile_win.bash
+        source ~/dev/kwp/dotfiles/bash_profile_common.bash
     fi
 
     export BASHPROFILE="done"
