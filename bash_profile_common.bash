@@ -97,3 +97,12 @@ export DOCKER_REG=may-mft.ra-int.com
 # Installed using Homebrew
 ################################################################################
 alias tree="tree -I 'node_modules'"
+
+
+################################################################################
+#
+# Aliases for commonly executed scripts.
+#
+################################################################################
+alias vscode-backup="node ~/dev/kwp/vsco/src/app/vsco.js backup-settings ~/dev/kwp/vscode-settings"
+alias vscode-restore="node ~/dev/kwp/vsco/src/app/vsco.js restore-settings ~/dev/kwp/vscode-settings"
