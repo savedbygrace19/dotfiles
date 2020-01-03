@@ -30,3 +30,12 @@ export PATH=${PATH}:~/dev/kwp/juggernautBash
 alias findgrep="findgrep.sh"
 
 export PATH=${PATH}:~/dev/kwp/stella/dist/app
+
+
+################################################################################
+# WebStorm
+#
+# In WebStorm, run "Tools -> Create command line launcher".  Once that is done,
+# this alias should work.
+################################################################################
+alias wstorm=webstorm64.exe

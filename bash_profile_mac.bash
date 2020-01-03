@@ -245,6 +245,15 @@ ulimit -S -n 2048
 
 
 ################################################################################
+# WebStorm
+#
+# In WebStorm, run "Tools -> Create command line launcher".  Once that is done,
+# this alias should work.
+################################################################################
+alias wstorm=webstorm
+
+
+################################################################################
 #
 # Development aliases
 #
