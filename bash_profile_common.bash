@@ -110,5 +110,20 @@ alias tree="tree -I 'node_modules'"
 # Aliases for commonly executed scripts.
 #
 ################################################################################
-alias vscode-backup="node ~/dev/kwp/vsco/src/app/vsco.js backup-settings ~/dev/kwp/vscode-settings"
-alias vscode-restore="node ~/dev/kwp/vsco/src/app/vsco.js restore-settings ~/dev/kwp/vscode-settings"
+
+
+alias copywrite="node ~/dev/kwp/tewl/copywrite/dist/app/copywrite.js"
+alias watch="node ~/dev/kwp/tewl/clitools/dist/watch.js"
+
+
+vscode-backup() {
+    pushd ~/dev/kwp/vsco
+    node src/app/vsco.js backup-settings ~/dev/kwp/vscode-settings
+    popd
+}
+
+vscode-restore() {
+    pushd ~/dev/kwp/vsco
+    node src/app/vsco.js restore-settings ~/dev/kwp/vscode-settings
+    popd
+}
