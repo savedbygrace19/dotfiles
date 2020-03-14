@@ -17,7 +17,7 @@
  '(ns-pop-up-frames nil)
  '(org-agenda-files
    (quote
-    ("/Users/kwpeters/Dropbox/home/data/todo.org" "/Users/kwpeters/Dropbox/home/data/home.org" "/Users/kwpeters/Dropbox/home/data/development-ideas.org")))
+    ("/Users/kwpeters.RA-INT/SynologyDrive/Drive/home/data/todo.org" "/Users/kwpeters.RA-INT/SynologyDrive/Drive/home/data/home.org" "/Users/kwpeters.RA-INT/SynologyDrive/Drive/home/data/development-ideas.org")))
  '(org-startup-indented t)
  '(package-selected-packages
    (quote
@@ -102,13 +102,13 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (setq default-frame-alist
      '((top . 0) (left . 200)
-       (width . 95) (height . 67)
+       (width . 95) (height . 50)
        )
      )
 
 (setq initial-frame-alist
      '((top . 0) (left . 0)
-       (width . 95) (height . 67)
+       (width . 95) (height . 50)
        )
      )
 
@@ -183,6 +183,8 @@
 ;; that speedbar will not display in its larger default font.
 ;;(add-to-list 'default-frame-alist '(font . "-apple-Consolas-medium-normal-normal-*-11-*-*-*-m-0-iso10646-1"))
 
+(add-to-list 'default-frame-alist
+                       '(font . "JetBrains Mono-9"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
