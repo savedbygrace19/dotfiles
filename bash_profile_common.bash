@@ -88,9 +88,8 @@ alias sp="echo; echo; echo; echo; echo; clear; hr"
 ################################################################################
 # Emacs
 ################################################################################
-
-alias e="emacs"
-alias enw="emacs -nw"
+# alias e="emacs"
+# alias enw="emacs -nw"
 
 
 # An alias that allows you to easily run a locally installed node
