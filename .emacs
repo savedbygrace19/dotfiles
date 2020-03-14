@@ -21,9 +21,10 @@
  '(org-startup-indented t)
  '(package-selected-packages
    (quote
-    (fancy-narrow zencoding-mode zenburn-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme tron-theme toxi-theme tango-2-theme soothe-theme solarized-theme sea-before-storm-theme reverse-theme request qsimpleq-theme naquadah-theme monokai-theme molokai-theme markdown-mode+ late-night-theme js2-refactor ir-black-theme inkpot-theme indent-guide gruber-darker-theme grandshell-theme github-theme gh fiplr expand-region exec-path-from-shell evil-paredit evil-numbers evil-nerd-commenter evil-indent-textobject espresso-theme emmet-mode django-theme deep-thought-theme cyberpunk-theme ace-jump-mode)))
+    (fancy-narrow zencoding-mode zenburn-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme tron-theme toxi-theme tango-2-theme soothe-theme solarized-theme sea-before-storm-theme reverse-theme request qsimpleq-theme naquadah-theme monokai-theme molokai-theme markdown-mode+ late-night-theme js2-refactor ir-black-theme inkpot-theme indent-guide gruber-darker-theme grandshell-theme github-theme gh fiplr expand-region exec-path-from-shell evil-paredit evil-numbers evil-nerd-commenter evil-indent-textobject espresso-theme emmet-mode deep-thought-theme ace-jump-mode)))
  '(ps-line-number t)
  '(set-mark-command-repeat-pop t)
+ '(show-paren-mode t)
  '(show-trailing-whitespace t)
  '(speedbar-show-unknown-files t)
  '(tool-bar-mode nil)
@@ -44,19 +45,55 @@
   (require 'package)
 
   ; List the packages you want.
-  (setq package-list '(ace-jump-mode cyberpunk-theme
-                       deep-thought-theme django-theme emmet-mode espresso-theme
-                       evil-indent-textobject evil-nerd-commenter evil-numbers
-                       evil-paredit evil exec-path-from-shell expand-region
-                       gh github-theme grandshell-theme
-                       gruber-darker-theme inkpot-theme ir-black-theme js2-refactor
-                       dash js2-mode late-night-theme logito markdown-mode+
-                       markdown-mode molokai-theme monokai-theme multiple-cursors
-                       naquadah-theme paredit pcache qsimpleq-theme request
-                       reverse-theme s sea-before-storm-theme solarized-theme
-                       soothe-theme tango-2-theme toxi-theme tron-theme twilight-anti-bright-theme
-                       twilight-bright-theme twilight-theme undo-tree yasnippet
-                       zenburn-theme zencoding-mode indent-guide fiplr))
+  (setq package-list '(
+      ace-jump-mode
+      deep-thought-theme
+      emmet-mode
+      espresso-theme
+      evil-indent-textobject
+      evil-nerd-commenter
+      evil-numbers
+      evil-paredit
+      evil
+      exec-path-from-shell
+      expand-region
+      gh
+      github-theme
+      grandshell-theme
+      gruber-darker-theme
+      inkpot-theme
+      ir-black-theme
+      js2-refactor
+      dash
+      js2-mode
+      late-night-theme
+      logito
+      markdown-mode+
+      markdown-mode
+      molokai-theme
+      monokai-theme
+      multiple-cursors
+      naquadah-theme
+      paredit
+      qsimpleq-theme
+      request
+      reverse-theme
+      s
+      sea-before-storm-theme
+      solarized-theme
+      soothe-theme
+      tango-2-theme
+      toxi-theme
+      tron-theme
+      twilight-anti-bright-theme
+      twilight-bright-theme
+      twilight-theme
+      undo-tree
+      yasnippet
+      zenburn-theme
+      zencoding-mode
+      indent-guide
+      fiplr))
 
   ; List the repositories containing them.
   (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
@@ -83,7 +120,7 @@
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (setq dropbox-folder (file-name-as-directory (getenv "CLOUDHOME")))
-;;(add-to-list 'load-path "~/.emacs.d/")
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
@@ -164,10 +201,11 @@
 ;;    kept-old-versions 2
 ;;    version-control t)        ; use versioned backups
 
-(setq backup-directory-alist
-          `((".*" . ,temporary-file-directory)))
-    (setq auto-save-file-name-transforms
-          `((".*" ,temporary-file-directory t)))
+;; Experiment
+;; (setq backup-directory-alist
+;;           `((".*" . ,temporary-file-directory)))
+;;     (setq auto-save-file-name-transforms
+;;           `((".*" ,temporary-file-directory t)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
@@ -185,6 +223,14 @@
 
 (add-to-list 'default-frame-alist
                        '(font . "JetBrains Mono-9"))
+
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:family "JetBrains Mono" :foundry "outline" :slant normal :weight normal :height 90 :width normal)))))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
@@ -909,9 +955,3 @@ same directory as the org-buffer and insert a link to this file."
 ;; How to specify the control key, up and down
 ;; (global-set-key [(control down)] 'kwp-scroll-down)
 ;; (global-set-key [(control up)]   'kwp-scroll-up)
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
