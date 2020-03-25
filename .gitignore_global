@@ -1,9 +1,6 @@
 #
 # Global .gitignore file
 #
-# On Mac OS X, this file should be located at:
-# /Users/kwpeters/.gitignore_global
-#
 
 # Mac OS X files
 .DS_Store
