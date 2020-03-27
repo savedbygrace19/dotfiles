@@ -381,6 +381,19 @@
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;;
+;; Example of a simple image reference.
+;;
+;; [[./img/a.jpg]]
+;;
+;; Example of an image with a caption and a label (for internal cross references):
+;;
+;; #+CAPTION: This is the caption for the next figure link (or table)
+;; #+NAME:   fig:SED-HR4049
+;; [[./img/a.jpg]]
+;;
+
+;; I believe this will only work on Mac since it uses screencapture.
 (defun my-org-screenshot ()
   "Take a screenshot into a time stamped unique-named file in the
 same directory as the org-buffer and insert a link to this file."
