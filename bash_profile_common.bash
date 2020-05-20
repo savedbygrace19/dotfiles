@@ -53,7 +53,7 @@ alias gs="git status"
 
 alias gitlg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 
-alias gitclean="git clean -d -f -x --exclude=.idea --exclude=*.env && find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +"
+alias gitclean="git clean -d -f -x --exclude=.idea --exclude=*.env --exclude=launchsettings.json && find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +"
 
 # alias gitbig="git config http.postBuffer 524288000"
 # alias gitsmall="git config --unset http.postBuffer"
