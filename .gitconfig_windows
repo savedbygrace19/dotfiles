@@ -1,0 +1,33 @@
+[core]
+	editor = \"C:\\Users\\kwpeters.RA-INT\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe\" --wait
+	autocrlf = true
+	excludesfile =
+[user]
+	email = kwpeters@ra.rockwell.com
+	name = Kevin Peters
+
+[diff]
+    tool = vscode
+
+[difftool]
+  prompt = false
+
+[difftool "sourcetree"]
+	cmd = '' \"$LOCAL\" \"$REMOTE\"
+[difftool "winmerge"]
+    cmd = "'C:/Program Files (x86)/WinMerge/WinMergeU.exe'" -e "$LOCAL" "$REMOTE"
+[difftool "kdiff3"]
+    path = C:/Program Files/KDiff3/kdiff3.exe
+    trustExitCode = false
+[difftool "vscode"]
+    cmd = code --new-window --wait --diff $LOCAL $REMOTE
+
+[merge]
+    tool = kdiff3
+
+[mergetool "sourcetree"]
+	cmd = 'C:/Program Files/KDiff3/kdiff3.exe' \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
+	trustExitCode = true
+[mergetool "kdiff3"]
+    path = C:/Program Files/KDiff3/kdiff3.exe
+    trustExitCode = false
