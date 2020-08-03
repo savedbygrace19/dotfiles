@@ -67,3 +67,16 @@ export PATH=${PATH}:~/dev/kwp/stella/dist/app
 #-------------------------------------------------------------------------------
 alias wstorm="webstorm64.exe"
 alias wstormdiff="node ~/dev/kwp/juggernautts/dist/app/webstormdiff.js"
+
+
+#-------------------------------------------------------------------------------
+# Windows Spotlight
+#
+# A convenient function that will copy the current set of Windows
+# Spotlight images into my wallpaers directory.
+# -------------------------------------------------------------------------------
+snag-windowsspotlightimages() {
+    pushd ~/dev/kwp/tewl/clitools
+    node ./dist/windowsSpotlightImages.js ~/SynologyDrive/Drive/home/data/wallpaper/Windows_Spotlight
+    popd
+}
