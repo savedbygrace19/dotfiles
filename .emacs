@@ -412,12 +412,19 @@ same directory as the org-buffer and insert a link to this file."
       (call-process "screencapture" nil nil nil "-i" filename))
   (if (eq system-type 'gnu/linux)
       (call-process "import" nil nil nil filename))
+  (if (eq system-type 'windows-nt)
+    (call-process "screencapture.exe" nil nil nil filename))
+
+
   ; insert into file if correctly taken
   (if (file-exists-p filename)
       (progn
         (insert (concat "[[file:" filename "]]"))
-        (call-process "/Applications/GIMP-2.10.app/Contents/MacOS/gimp" nil nil nil "--new-instance" "--no-splash" filename)
         (org-display-inline-images)
+        (if (eq system-type 'darwin)
+            (call-process "/Applications/GIMP-2.10.app/Contents/MacOS/gimp" nil nil nil "--new-instance" "--no-splash" filename))
+        (if (eq system-type 'windows-nt)
+            (call-process "C:/Program Files (x86)/Corel/Corel Paint Shop Pro X/Paint Shop Pro X.exe" nil nil nil filename))
       )
     )
   )
