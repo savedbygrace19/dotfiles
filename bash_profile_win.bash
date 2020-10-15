@@ -80,3 +80,21 @@ snag-windowsspotlightimages() {
     node ./dist/windowsSpotlightImages.js ~/SynologyDrive/Drive/home/data/wallpaper/Windows_Spotlight
     popd
 }
+
+#-------------------------------------------------------------------------------
+# Smart Object Configurator
+#
+# Convenience functions for building and running the SOC tool(s).
+#-------------------------------------------------------------------------------
+
+soc-build() {
+    hr && ./buildandtestlocally.bat
+}
+
+soc-launch() {
+    soc/bin/x86/Debug/netcoreapp3.1/soc.exe "C:\Users\kwpeters.RA-INT\Desktop\rsl5k projects\dev1.ACD"
+}
+
+soc-revertacd() {
+    cp ~/Desktop/rsl5k\ projects/backup/dev1\ -\ 3\ plus\ src\ tags.ACD ~/Desktop/rsl5k\ projects/dev1.ACD
+}

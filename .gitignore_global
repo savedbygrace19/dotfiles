@@ -2,11 +2,26 @@
 # Global .gitignore file
 #
 
+################################################################################
+# Setup
+################################################################################
+# On Mac:
+# git config --global core.excludesfile ~/dev/kwp/dotfiles/.gitignore_global
+# On Windows:
+# git config --global core.excludesfile %USERPROFILE%\dev\kwp\dotfiles\.gitignore_global
+#
+# To confirm this setting:
+# git config --global --get core.excludesfile
+
 # Mac OS X files
 .DS_Store
 
 # WebStorm temporary files
 /.idea/
+
+# VSCode
+/.vscode/
+/.ionide/
 
 # Emacs temporary files
 *~
