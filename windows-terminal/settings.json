@@ -15,7 +15,7 @@
 {
     "$schema": "https://aka.ms/terminal-profiles-schema",
 
-    "defaultProfile": "{344275b5-7776-4486-9b27-be3176bf9f76}",
+    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
     "theme": "dark",
     "initialCols": 100,
     "initialRows": 50,
@@ -66,7 +66,14 @@
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "name": "Windows PowerShell",
                 "commandline": "powershell.exe",
-                "hidden": false
+                "hidden": false,
+                "startingDirectory": "%USERPROFILE%",
+                "fontFace": "JetBrains Mono NL",
+                "useAcrylic": false,
+                "closeOnExit": true,
+                "padding": "5, 5, 5, 5",
+                "snapOnInput": true,
+                "experimental.retroTerminalEffect": false
             },
             {
                 // Make changes here to the cmd.exe profile.
