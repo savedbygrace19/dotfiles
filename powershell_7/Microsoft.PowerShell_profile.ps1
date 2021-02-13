@@ -3,8 +3,15 @@
 #
 # - Install PowerShell 7 from the Windows store.
 #
-# - Copy this profile to the user profile location:
-# cp <path_to_this_file> $profile
+# - In a cmd.exe windows, create a symbolic link for the config file, where the
+#   target is the config file within my dotfiles repo.  In this command, the first
+#   argument is the result of evaluating $profile within PowerShell.  By using
+#   a symbolic link in this way, I can just edit my config file within my
+#   dotfiles repo and don't have to make copies when I want to backup or restore
+#   it.
+#
+#   mklink C:\Users\kwpeters.RA-INT\Documents\PowerShell\Microsoft.PowerShell_profile.ps1 c:\Users\kwpeters.RA-INT\dev\kwp\dotfiles\powershell_7\Microsoft.PowerShell_profile.ps1
+#
 #
 # - Install dependencies (in a non-elevated PowerShell)
 # Install-Module posh-git -Scope CurrentUser -AllowPrerelease -Force
