@@ -10,6 +10,8 @@
 #   dotfiles repo and don't have to make copies when I want to backup or restore
 #   it.
 #
+#   mklink <path_to_$profile> <path_to_target_repo_ps1>
+#   For example:
 #   mklink C:\Users\kwpeters.RA-INT\Documents\PowerShell\Microsoft.PowerShell_profile.ps1 c:\Users\kwpeters.RA-INT\dev\kwp\dotfiles\powershell_7\Microsoft.PowerShell_profile.ps1
 #
 #
