@@ -19,6 +19,12 @@
 # Install-Module posh-git -Scope CurrentUser -AllowPrerelease -Force
 #
 
+Remove-Alias -Name ls
+function ls {
+    # ls should always use -Force so that dot files are shown.
+    Get-ChildItem -Force $args
+}
+
 
 ################################################################################
 # Posh Git
