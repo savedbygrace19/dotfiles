@@ -13,7 +13,7 @@
 #   Copy the output file path.
 #   Now run cmd.exe and issue the following command to create the symbolic link:
 #
-#   mklink <value_of_$profile> <path_to_target_repo_ps1>
+#   mklink <value_of_$profile> <path_to_this_file_within_local_cloned_repo>
 #
 #   For example: mklink C:\Users\kwpeters.RA-INT\Documents\PowerShell\Microsoft.PowerShell_profile.ps1 c:\Users\kwpeters.RA-INT\dev\kwp\dotfiles\powershell_7\Microsoft.PowerShell_profile.ps1
 #
