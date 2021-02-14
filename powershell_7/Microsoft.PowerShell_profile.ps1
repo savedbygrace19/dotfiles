@@ -3,20 +3,25 @@
 #
 # - Install PowerShell 7 from the Windows store.
 #
-# - In a cmd.exe windows, create a symbolic link for the config file, where the
-#   target is the config file within my dotfiles repo.  In this command, the first
-#   argument is the result of evaluating $profile within PowerShell.  By using
-#   a symbolic link in this way, I can just edit my config file within my
-#   dotfiles repo and don't have to make copies when I want to backup or restore
-#   it.
+# - Instead of copying this file to the location where pwsh.exe expects it to
+#   be, I prefer to create a symbolic link at that location, pointing to this
+#   file.  That way, changes can be made directly in the repo and I don't have
+#   to constantly copy this file when backing up and restoring.  To make the
+#   symbolic link, first figure out where pwsh.exe wants to find your config
+#   file.  In a pwsh.exe window run
+#     $profile
+#   Copy the output file path.
+#   Now run cmd.exe and issue the following command to create the symbolic link:
 #
-#   mklink <path_to_$profile> <path_to_target_repo_ps1>
-#   For example:
-#   mklink C:\Users\kwpeters.RA-INT\Documents\PowerShell\Microsoft.PowerShell_profile.ps1 c:\Users\kwpeters.RA-INT\dev\kwp\dotfiles\powershell_7\Microsoft.PowerShell_profile.ps1
+#   mklink <value_of_$profile> <path_to_target_repo_ps1>
 #
+#   For example: mklink C:\Users\kwpeters.RA-INT\Documents\PowerShell\Microsoft.PowerShell_profile.ps1 c:\Users\kwpeters.RA-INT\dev\kwp\dotfiles\powershell_7\Microsoft.PowerShell_profile.ps1
 #
-# - Install dependencies (in a non-elevated PowerShell)
-# Install-Module posh-git -Scope CurrentUser -AllowPrerelease -Force
+# - In a PowerShell console, set your execution policy (if you haven't already):
+#     Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned -Force
+#
+# - In a PowerShell console, install dependencies used in this file:
+#     Install-Module posh-git Scope CurrentUser -AllowPrerelease -Force
 #
 
 Remove-Alias -Name ls
