@@ -55,7 +55,7 @@ function Enter-AdminPSSession {
   }
 }
 
-# Optionally also define a short alias name:
+# An short name alias for the above function:
 # Note: 'psadmin' is a nonstandard alias name; a more conformant name would be
 #       the somewhat clunky 'etasn'
 #       ('et' for 'Enter', 'a' for admin, and 'sn'` for session)
