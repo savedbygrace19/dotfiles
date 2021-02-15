@@ -24,6 +24,10 @@
 #     Install-Module posh-git Scope CurrentUser -AllowPrerelease -Force
 #
 
+################################################################################
+# Overridden Commands
+################################################################################
+
 Remove-Alias -Name ls
 function ls {
     # ls should always use -Force so that dot files are shown.
@@ -47,6 +51,7 @@ $GitPromptSettings.DefaultPromptBeforeSuffix.Text = '`n'
 ################################################################################
 # Elevating to admin
 ################################################################################
+
 function Enter-AdminPSSession {
   if ($env:OS -eq 'Windows_NT') {
     Start-Process -Verb RunAs (Get-Process -Id $PID).Path
@@ -60,6 +65,16 @@ function Enter-AdminPSSession {
 #       the somewhat clunky 'etasn'
 #       ('et' for 'Enter', 'a' for admin, and 'sn'` for session)
 Set-Alias psadmin Enter-AdminPSSession
+
+
+################################################################################
+# Personal Productivity
+################################################################################
+
+function capcom {
+    $scriptPath = Join-Path -Path $env:HOME -ChildPath "dev/kwp/juggernaut/capcom.py"
+    python $scriptPath
+}
 
 
 ################################################################################
