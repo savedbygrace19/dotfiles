@@ -36,6 +36,12 @@ function ls {
 
 
 ################################################################################
+# Get-ChildItemColor
+################################################################################
+Import-Module Get-ChildItemColor
+
+
+################################################################################
 # Posh Git
 ################################################################################
 Import-Module posh-git
@@ -68,18 +74,8 @@ Set-Alias psadmin Enter-AdminPSSession
 
 
 ################################################################################
-# Personal Productivity
-################################################################################
-
-function capcom {
-    $scriptPath = Join-Path -Path $env:HOME -ChildPath "dev/kwp/juggernaut/capcom.py"
-    python $scriptPath
-}
-
-
-################################################################################
 # PATH environment variable
 ################################################################################
 
 # Append script location(s) to the end of the PATH environment variable.
-$env:path += ";C:\Users\kwpeters.RA-INT\dev\kwp\PowerShellScripts"
+$env:path += ";C:\Users\jlmillar\source\repos\dotfiles\powershell_7"
