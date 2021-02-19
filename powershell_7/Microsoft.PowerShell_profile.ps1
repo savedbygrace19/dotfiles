@@ -25,9 +25,17 @@
 #
 
 ################################################################################
+# Other scripts
+################################################################################
+. $PSScriptRoot\git.ps1
+. $PSScriptRoot\hr.ps1
+. $PSScriptRoot\rmrf.ps1
+. $PSScriptRoot\touch.ps1
+. $PSScriptRoot\jobs.ps1
+
+################################################################################
 # Overridden Commands
 ################################################################################
-
 Remove-Alias -Name ls
 function ls {
     # ls should always use -Force so that dot files are shown.
@@ -71,11 +79,3 @@ function Enter-AdminPSSession {
 #       the somewhat clunky 'etasn'
 #       ('et' for 'Enter', 'a' for admin, and 'sn'` for session)
 Set-Alias psadmin Enter-AdminPSSession
-
-
-################################################################################
-# PATH environment variable
-################################################################################
-
-# Append script location(s) to the end of the PATH environment variable.
-$env:path += ";C:\Users\jlmillar\source\repos\dotfiles\powershell_7"
