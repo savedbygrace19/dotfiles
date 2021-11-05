@@ -32,6 +32,7 @@
 . $PSScriptRoot\rmrf.ps1
 . $PSScriptRoot\touch.ps1
 . $PSScriptRoot\jobs.ps1
+. $PSScriptRoot\kubectl.ps1
 
 ################################################################################
 # Overridden Commands
